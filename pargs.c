@@ -14,10 +14,6 @@ char ** parse_args(char * line) {
         arr[i] = strsep(&new_line," ");
     }
     
-    return arr;          
-    for (int i = 0; strlen(line); i++){
-        arr[i] = strsep(&line," ");
-    }
     return arr;
 }
 
