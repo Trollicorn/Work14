@@ -5,12 +5,12 @@
 
 char ** parse_args(char * line){
   char ** arr = malloc(100);                //sizeof(*line)); idk why it doesnt work, replace later
-  printf("it good\n");
-  strcpy(oof,line);
-  for (int i = 0; oof; i++){
-    arr[i] = strsep(&oof," ");
-    printf("%s\n",arr[i]);
+//  printf("it good\n");
+  for (int i = 0; strlen(line); i++){
+    arr[i] = strsep(&line," ");
+  //  printf("%s\n",arr[i]);
   }
+  return arr;
 }
 
 
