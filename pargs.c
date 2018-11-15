@@ -6,13 +6,13 @@
 char ** parse_args(char * line){
   char * arr[5];
   for (int i = 0; line; i++){
-    arr[i] = strpsep(line," ");
+    arr[i] = strsep(line," ");
   }
 }
 
 
-int main(){
-  char a[] = "eee ee e";
-
-  printf("%s\n",parse_args );
+int main(int argc, char * argv[]){
+  char ** args = parse_args(argv[1]);
+  execvp(args[0],args);
+  return 0;
 }
